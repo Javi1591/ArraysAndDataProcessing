@@ -1,51 +1,38 @@
-# Java Assignment 7 – Arrays and Data Processing
+# COP2251 – Java Assignment 7
 
-A Java console application that demonstrates the use of arrays, loops, and basic data processing.  
-This assignment introduces indexed data storage and iterative computation across multiple values, forming the foundation for future topics such as sorting, searching, and data structures.
+## Summary
+This assignment contains three small Java programs that practice array processing, random simulation and tallying, and collection handling. The work emphasizes indexed iteration, aggregation (min/max and differences), and formatted console output across arrays and `ArrayList`.
 
----
+## Program Behavior
+- VariableArray / VariableArrayTester  
+  - Provides utility methods that operate on integer arrays (for example, computing the maximum and minimum values).  
+  - The tester constructs several sample integer arrays, calls the array-utility methods (e.g., maximum element), and prints results to the console.  
+  - Demonstrates defensive checks for null/empty arrays and iterates with simple `for` loops to compute results.
 
-## Assignment Overview
+- Dice  
+  - Simulates a large number of six-sided die rolls using `java.util.Random`.  
+  - Stores individual outcomes, tallies frequencies for faces 1–6, and prints per-face counts.  
+  - Calculates and displays the difference between the largest and smallest face counts as a simple measure of distribution spread.
 
-### Description
-The program collects, stores, and processes a series of numeric or textual inputs using an array.  
-It performs operations such as calculating totals, averages, minimums, or maximums, and displays the results in a formatted summary.  
-This project reinforces array declaration, initialization, traversal, and index-based manipulation.
+- Athlete  
+  - Builds an `ArrayList<String>` of athlete names and prints the list in multiple formats.  
+  - Demonstrates `ArrayList` operations such as indexed removal.  
+  - Prints the updated list with asterisks between names on a single line.
 
-### Features
-- Declares and initializes arrays with fixed or user-defined sizes.  
-- Accepts and validates user input for each array element.  
-- Uses for loops and enhanced for loops for iteration.  
-- Performs calculations such as sum, average, and extremum detection.  
-- Outputs neatly formatted results to the console.
-
-### Learning Objectives
-- Understand how to declare, allocate, and populate arrays in Java.  
-- Learn to access elements using indices and process collections of data efficiently.  
-- Apply looping constructs for repetitive operations.  
-- Reinforce array-based algorithmic problem solving.
-
-### Files
-- `Nazario_Assignment7.java` (example filename) — complete implementation of Assignment 7.
-
----
-
-## Program Structure
-Each program section includes:
-1. Input Phase – Prompts the user for data and stores it in an array.  
-2. Processing Phase – Calculates totals, averages, or comparative results using loops.  
-3. Output Phase – Displays computed results with clear formatting and precision.  
-
-All logic is modularized for readability and simplicity.
-
----
+## Key Concepts Demonstrated
+- Arrays: Allocation, traversal, and aggregation (min/max).  
+- Random Simulation: Generating pseudorandom integers and tallying frequencies.  
+- Collections: Using `ArrayList`, indexed access, removal, and iteration (enhanced for-loop).  
+- Defensive Programming: Null/empty checks for arrays.  
+- Console Output: Clear, labeled printing of intermediate and final results.
 
 ## How to Compile and Run
+Requirements:
+- Java Development Kit (JDK) 17 or later
+- Command line terminal or IDE (IntelliJ IDEA, Eclipse, or VS Code)
 
-### Requirements
-- Java Development Kit (JDK) 17 or newer
-
-### Command Line Instructions
-```bash
-javac Nazario_Assignment7.java
-java Nazario_Assignment7
+Commands (from the `nazario7/src` directory):
+javac -d ../out module-info.java nazario7/VariableArray.java nazario7/VariableArrayTester.java nazario7/Dice.java nazario7/Athlete.java  
+java -cp ../out nazario7.VariableArrayTester  
+java -cp ../out nazario7.Dice  
+java -cp ../out nazario7.Athlete
